@@ -1,19 +1,26 @@
-import React from "react";
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Events from './components/Events';
+import Team from './components/Team';
+import Footer from './components/Footer';
 const App = () => {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<h1>About</h1>} />
-      </Routes>
-      <Footer />
-    </Router>
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/" element={<About />} />
+          <Route path="/" element={<Events />} />
+          <Route path="/" element={<Team />} />
+        </Routes>
+        <Footer/>
+      </Router>
+    </>
   );
 };
 

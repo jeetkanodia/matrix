@@ -1,10 +1,343 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root::-webkit-scrollbar {
+  display: none;
+}
 
-* {
-  padding: 0;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.navbar {
+  width: 100%;
+  height: 80px; /* You can adjust the height as needed */
+  background-color: transparent;
+  color: white;
+  position: fixed; /* Fix the navbar at the top of the screen */
+  top: 0; /* Align it to the top */
+  left: 0; /* Ensure it starts from the left edge */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.logo-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.logo-container img {
+  height: 55px;
+  width: 55px;
+  object-fit: contain;
+  padding-left: 1rem;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.nav-links a:hover {
+  color: #4caf50; /* Change to your desired hover color */
+}
+
+.heading {
+  font-weight: 900;
+  font-size: 60px;
+  display: inline-block;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #4caf50;
+  -webkit-text-fill-color: black;
+  animation: glow 3s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate; /* Adjusted duration and easing */
+}
+
+.multimedia {
+  padding-left: 1.25rem;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 1px #4caf50, 0 0 2px #4caf50, 0 0 4px #4caf50, 0 0 6px #4caf50, 0 0 8px #4caf50;
+  }
+  to {
+    text-shadow: 0 0 2px #2e7d32, 0 0 4px #4caf50, 0 0 6px #4caf50, 0 0 8px #81c784, 0 0 10px #81c784;
+  }
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 1px #4caf50, 0 0 2px #4caf50, 0 0 4px #4caf50, 0 0 6px #4caf50, 0 0 8px #4caf50;
+  }
+  to {
+    text-shadow: 0 0 2px #2e7d32, 0 0 4px #4caf50, 0 0 6px #4caf50, 0 0 8px #81c784, 0 0 10px #81c784;
+  }
+}
+
+footer {
+  height: 31vh;
+  background-color: #140d0da7;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left-content {
+  width: 44%;
+  padding: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-content {
+  width: 22%;
+  padding: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+button {
+  background-color: #fff;
+  color: #333;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+  border: none;
+}
+
+.logo {
+  width: 22%;
+}
+
+.logo img {
+  width: 60%;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+}
+
+.socials img {
+  width: 35px;
+  padding-right: 2rem;
+}
+
+.vertical-hr {
+  width: 1px; /* Set the width of the vertical line */
+  height: 22vh; /* Set the height of the vertical line (full viewport height in this example) */
+  background-color: #28a541; /* Set the color of the vertical line */
+  margin: 0 auto; /* Center the vertical line horizontally */
+}
+
+.scroll-watcher {
+  height: 2px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #9400d3;
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10rem;
+}
+
+.domain {
+  width: 90%;
+  display: flex;
+  margin: 3rem;
+  background-color: #372945ab;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  scale: 0.8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 150px 500px;
+}
+
+.domain h1 {
+  width: 20%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6rem;
+  margin-right: 5rem;
+}
+
+.text .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #5d4a71cb;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: larger;
+}
+
+.image {
+  width: 26%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.image img {
+  width: 100%;
+}
+
+.aboutus{
+  width: 90%;
+  display: flex;
+  margin: 3rem;
+  background-color: #372945ab;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  scale: 0.8; opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: 150px 500px;
+}
+
+.aboutus-content{
+  width: 45%;
+  margin: 4rem;
+}
+
+.aboutus-text{
+  margin-bottom: 2rem;
+}
+
+.aboutus-image{
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutus-image img{
+ width: 95%;
+}
+
+@keyframes fade-in {
+  to {scale: 1; opacity: 1;}
 }

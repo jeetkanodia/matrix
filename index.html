@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>MATRIX</title>
     <style>
       body {
         margin: 0;
@@ -23,6 +23,7 @@
   <body>
     <div id="root"></div>
     <script type="module">
+      
       import * as THREE from 'three';
 
       // Create scene
@@ -40,7 +41,7 @@
       // Create invisible grid
       const gridSize = window.innerWidth / 10;
       const gridSpacing = 1;
-      const material = new THREE.LineBasicMaterial({ color: '#9400D3', transparent: true, opacity: 0 });
+      const material = new THREE.LineBasicMaterial({ color: '#7360DF', transparent: true, opacity: 0.3 });
 
       const raycaster = new THREE.Raycaster();
       const mouse = new THREE.Vector2();
@@ -110,7 +111,8 @@
           const line = new THREE.LineSegments(edges, lineMaterial);
           line.position.set(x, y, 0);
           line.userData.targetOpacity = 0;
-          line.userData.appearingSpeed = 0.2; // Adjust this value to control the appearing speed
+          
+          line.userData.appearingSpeed = 0.29; // Adjust this value to control the appearing speed
           line.userData.disappearingSpeed = 0.08; // Adjust this value to control the disappearing speed
           scene.add(line);
         }
@@ -129,12 +131,15 @@
           // Set target opacity for all objects to 0
           for (let i = 0; i < scene.children.length; i++) {
             scene.children[i].userData.targetOpacity = 0;
+            //scene.children[i].material.color.set('#b203d0e3'); 
           }
         },
         false
       );
       // Start animation
       animate();
+      // Create an intersection observer
+
     </script>
 
     <script type="module" src="./src/main.jsx"></script>

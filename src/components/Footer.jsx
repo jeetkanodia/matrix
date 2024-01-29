@@ -1,11 +1,21 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React,{ useEffect } from 'react';
 import logon from '../assets/logon.png';
 import twitter from '../assets/twitterx.svg'
 import facebook from '../assets/facebook.svg'
 import instagram from '../assets/instagram.svg'
+import $ from 'jquery';
 
 const Footer = () => {
+  useEffect(() => {
+    // Use jQuery here
+    $('input').on('focus', function() {
+      // Do something when an input field is focused
+    });
+
+    
+  }, []);
+
   return (
     <footer>
       <div className="footer-content">
@@ -14,7 +24,7 @@ const Footer = () => {
         </div>
         <div className="vertical-hr"></div>
         <div className="left-content">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, possimus delectus tenetur quisquam blanditiis.</p>
+          <p className='footer-text'>Matrix(The Multimedia Club) is an official club associated with vellore institute of Technology , Vellore.</p>
           <div className="socials">
             <img src={instagram}/>
             <img src={facebook}/>
@@ -24,11 +34,11 @@ const Footer = () => {
         </div>
         <div className="vertical-hr"></div>
         <div className="right-content">
-          <form>
+        <form id='conact_us'>
             <input type="text" placeholder="Your Name" />
             <input type="text" placeholder="Your Email" />
             <button type="submit">Send</button>
-          </form>
+        </form>
         </div>
       </div>
     </footer>

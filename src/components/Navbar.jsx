@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <>
       <div className="scroll-watcher"></div>
-      <div className="navbar">
+      <div id='navbar' className="navbar">
         <div className="navbar-content">
           <div className="logo-container">
             <Link to="/">
@@ -20,12 +20,6 @@ const Navbar = () => {
             </div>
             <div className="mr-5">
               <Link to="/events">Events</Link>
-            </div>
-            <div className="mr-5">
-              <Link to="/about">About Us</Link>
-            </div>
-            <div className="mr-5">
-              <Link to="/team">Our Team</Link>
             </div>
           </div>
         </div>

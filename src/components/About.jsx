@@ -1,26 +1,25 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import image from '../assets/image1.png';
 import image2 from '../assets/image2.png';
+import escape from '../assets/events/bollywood.png';
+import bollywood from '../assets/events/escapematrix.png';
+import Card from './Card';
 
 const About = () => {
   return (
     <div className="background">
-      <div className="domain">
+      <div className="events">
         <h1 style={{ fontSize: 60 }}>
-          <span style={{ color: '#C477CB' }}>DOMAINS</span> WE OFFER
+          Our Flagship <span style={{ color: '#C477CB' }}> Events</span>
         </h1>
-        <div className="text">
-          <div className="content">Photography</div>
-          <div className="content">Videography</div>
-          <div className="content">Design</div>
-          <div className="content">Photography</div>
-          <div className="content">Videography</div>
+        <div className="images">
+          <img src={bollywood} alt="" />
+          <img src={escape} alt="" />
         </div>
-        <div className="image">
-          <img src={image} alt="" />
-        </div>
+<br /><br />
       </div>
+
+      <Card/>
       <div className="aboutus">
         <div className="aboutus-image">
           <img src={image2} alt="" />
@@ -31,8 +30,16 @@ const About = () => {
           </h1>
           <div className="aboutus-text">
             <div className="aboutus-para">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas mollitia asperiores consequatur dolore nostrum, voluptatem officiis ex? Maiores similique suscipit incidunt, facilis dolorem adipisci autem, doloribus optio velit quidem neque?Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Fugit rem dolorum cum voluptatibus enim voluptates ratione nesciunt et animi voluptas doloremque quo tempora illo, dignissimos harum odit, expedita quibusdam debitis!
+              <p>
+              MATRIX VIT is a student club in VIT Vellore which aims at promoting talents and knowledge about the digital world and media using various media tools.
+              </p>
+              <p>
+              We are a bunch of tech savy creative people with artistic vision who would like to encourage and promote talents and express their creative pragmatic mindset. Multimedia is the convergence of these different professions and therefore we have our team divided into domains like technical, finance, design and management.
+              </p>
+              <p>
+              Matrix VIT offers students a chance to spark their imaginations and innovate while showcasing their technical prowess.
+              </p>
+
             </div>
           </div>
         </div>

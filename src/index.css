@@ -235,7 +235,7 @@ button {
 }
 
 .socials img {
-  width: 35px;
+  width: 30px;
   padding-right: 2rem;
 }
 
@@ -646,3 +646,7 @@ button {
 }
 
 
+.svg-icon {
+  height: 100%;
+  height: auto;
+}

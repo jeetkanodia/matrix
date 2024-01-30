@@ -73,8 +73,8 @@ const Carousel = () => {
 
 
   return (
-    <>
-    <h2 className="card-heading" style={{fontSize: '40px', marginBottom: '1rem'}}>Don&apos;t take our word for it, see what the <span style={{color: '#C477CB'}}>community</span> is saying</h2>
+    <div style={{display:"flex", flexDirection: "column", alignItems:'center', justifyContent:'center'}}>
+    <h2 className="card-heading" style={{fontSize: '40px', margin: '2rem'}}>Don&apos;t take our word for it, see what the <span style={{color: '#C477CB'}}>community</span> is saying</h2>
     <div className="carousel">
       <Slider {...settings}>
         {cards.map((card, index) => (
@@ -85,7 +85,7 @@ const Carousel = () => {
         ))}
       </Slider>
     </div>
-    </>
+    </div>
   );
 };
 
